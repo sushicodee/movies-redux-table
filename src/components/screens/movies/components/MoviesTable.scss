@@ -31,18 +31,17 @@
                                 width:8.5;
                                 height:8.5;
                                 z-index: 5;
-                                img{
-                                    width: 100%;
-                                    transform: scale(1.8);
+                                .btn-icon{
                                     overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        transform: scale(2);
+                                        overflow: hidden;
+                                        object-fit: cover;
+                                    }
                                 }
                             }
-                            .btn:first-child{
-                                    top:5px;
-                            }
-                            .btn:last-child{
-                                    top:-5px;
-                            }
+              
                         }
                 }
             }

@@ -6,6 +6,7 @@ import trashIcon from './../../../../assets/icons/delete.png'
 import {useDispatch,useSelector} from 'react-redux';
 import { deleteMovie, sortMovies } from '../../../../actions/movies/moviesActions'
 import './MoviesTable.scss';
+import Loader from '../../../commons/Loader/Loader'
 
 function MoviesTable() {
     const fields = React.useMemo(() => ['Title','Year','imdbID'],[])
@@ -45,9 +46,10 @@ function MoviesTable() {
                     </tr>
                 </thead>
                 <tbody>
+                   
                     {data && data.map((data) => 
                         <tr key = {data.imdbID}>
-                            {fields.map(key => <td key={data[key]}>{data[key]} </td>)}
+                            {fields.map(key => <td key={data[key]}>{key === 'imdbID'?data[key].substr(2):data[key]} </td>)}
                            <td>
                             <ButtonComponent key = {data.imdbID}  icon ={trashIcon} handleclick = {() =>handleDeleteMovie(data.imdbID)}/>
                            </td>
@@ -59,7 +61,8 @@ function MoviesTable() {
                         </tr>
                 }
                 </tbody>
-            </table>        
+            </table>  
+            {isLoading && <Loader/>}      
         </div>
     )
 }

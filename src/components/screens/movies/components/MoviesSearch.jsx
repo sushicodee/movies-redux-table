@@ -12,7 +12,7 @@ function MoviesSearch() {
         const {value} = e.target;
         setSearchQuery(value)
     }
-
+    
     const handleKeyUp = e => {
         if(e.key === 'Enter'){
             handleSearch();
