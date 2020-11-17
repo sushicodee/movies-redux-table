@@ -11,12 +11,10 @@ function MoviesSearch() {
     const handleChange = (e) => {
         const {value} = e.target;
         setSearchQuery(value)
-        console.log(e.code);
     }
 
     const handleKeyUp = e => {
         if(e.key === 'Enter'){
-            console.log('key up')
             handleSearch();
         }
     }
