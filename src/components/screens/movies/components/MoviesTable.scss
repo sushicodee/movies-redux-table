@@ -1,14 +1,95 @@
+@import './../../../../styles/variables'; 
 .table-contents{
-    min-width:574px;
+    &:first-child{
+    border-spacing: 0 21px;
+    }
+    // min-width:574px;
+    border-collapse: separate;
+    margin-top:21px;
+    border-spacing: 0 17px;
     thead{
-        th{
+        margin-bottom:17px;
+        tr{
+            th{ 
+                text-align: left;
+                box-shadow: 0px 3px 3px $white;
+                border: 0.5px solid $grey;
+                border-left: 0;
+                border-right: 0;
+                font: normal normal 600 14px/16px Work Sans;
+                line-height: 46px;
+                padding: 0 39px;
+                span{
+                    align-items: center;
+                    display: flex;
+                    span{
+                        flex-direction: column;
+                        width:8.5px;
+                        // height:34px;
+                        position: relative;
+                            .btn{
+                                width:8.5;
+                                height:8.5;
+                                z-index: 5;
+                                img{
+                                    width: 100%;
+                                    transform: scale(1.8);
+                                    overflow: hidden;
+                                }
+                            }
+                            .btn:first-child{
+                                    top:5px;
+                            }
+                            .btn:last-child{
+                                    top:-5px;
+                            }
+                        }
+                }
+            }
 
+            th:first-child{
+                border-left:0.5px solid $grey;
+                border-top-left-radius: 11px;
+                border-bottom-left-radius: 11px;
+            }
+            th:last-child{
+                border-right:0.5px solid $grey;
+                border-top-right-radius: 11px;
+                border-bottom-right-radius: 11px;
+            }
         }
     }
     tbody{
         tr{
-            td{
-
+            td{ 
+                
+                box-shadow: 0px 3px 3px$white;
+                border: 0.20000000298023224px solid $grey;  
+                border-left: 0;
+                border-right: 0; 
+                margin-bottom: 9px;     
+                min-width: 60px;
+                max-width: 300px;
+                padding: 0 0 0 39px;
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                white-space: nowrap;
+                font: normal normal normal 16px/19px Work Sans;
+                line-height: 40px;
+                span{
+                    width:17px;
+                    height:17px;
+                }
+            }
+            td:first-child{
+                border-left:0.5px solid $grey;
+                border-top-left-radius: 11px;
+                border-bottom-left-radius: 11px;
+            }
+            td:last-child{
+                border-right:0.5px solid $grey;
+                border-top-right-radius: 11px;
+                border-bottom-right-radius: 11px;
             }
         }
     }

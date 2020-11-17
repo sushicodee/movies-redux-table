@@ -1,5 +1,9 @@
 .btn{
+    cursor: pointer;
     display: inline-flex;
+    background-color: transparent;
+    border:none;
+    outline: none;
     span{
         img{
             width: 100%;

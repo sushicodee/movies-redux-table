@@ -9,18 +9,23 @@ function InputComponent({
   error,
   value,
   handlechange,
-  className
+  handlekeyup,
+  className,
+  ref
 }) {
   return (
     <>
       <input
+        ref={ref}
         name={name}
         type={type || "text"}
         placeholder={placeholder}
         value={value}
         className={className || "input"}
         onChange = {handlechange}
-      />
+        autoComplete='off'
+        onKeyUp = {handlekeyup}
+    />
     </>
   );
 }

@@ -1,18 +1,26 @@
 import React , {useState,useEffect} from 'react'
 import ButtonComponent from '../../../commons/Button/ButtonComponent';
 import InputComponent from '../../../commons/input/InputComponent';
-import {useDispatch,useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import searchIcon from './../../../../assets/icons/search-24px.svg'
 import { fetchMovies } from '../../../../actions/movies/moviesActions';
+import './MoviesSearch.scss';
 function MoviesSearch() {
     const [searchQuery, setSearchQuery] = useState('');
     const dispatch = useDispatch();
-    const movie = useSelector(state => state.movie)
     const handleChange = (e) => {
         const {value} = e.target;
         setSearchQuery(value)
+        console.log(e.code);
     }
-    const handleSearch = (e) => {
+
+    const handleKeyUp = e => {
+        if(e.key === 'Enter'){
+            console.log('key up')
+            handleSearch();
+        }
+    }
+    const handleSearch = () => {
         dispatch(fetchMovies(searchQuery))
     }
     useEffect(() => {
@@ -24,7 +32,7 @@ function MoviesSearch() {
     return (
         <div className = 'movies-search-container'>
             <div className = 'search-bar'>
-            <InputComponent name= 'search' value={searchQuery} placeholder = 'Search movies title' handlechange = {handleChange} />
+            <InputComponent  handlekeyup = {handleKeyUp} name= 'search' value={searchQuery} placeholder = 'Search movies title' handlechange = {handleChange} />
             <ButtonComponent handleclick = {handleSearch} icon ={searchIcon} />
             </div>
         </div>

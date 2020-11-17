@@ -8,7 +8,7 @@ function Routes() {
     return (
         <Router>
             <Switch>
-                <PublicRoutes exact path = '/:Title?' component = {Movies}/>
+                <PublicRoutes exact path = '/' component = {Movies}/>
                 <PublicRoutes component={NotFound} />
             </Switch>
         </Router>
