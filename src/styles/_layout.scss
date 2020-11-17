@@ -1,0 +1,29 @@
+
+.core-app-wrapper {
+  
+}
+
+/* mobile */
+@media (min-width: 375px) {
+    .core-app-wrapper{
+        // width: 23.4375em;
+        margin: 0px 16px 0px 16px;
+    }
+}
+
+// tablet
+@media (min-width: 768px) {
+    .core-app-wrapper{
+        width: 43.75em;
+        margin: auto;
+       
+    }
+}
+
+// desktop
+@media (min-width: 1920) {
+    .core-app-wrapper{
+        width: 30em;
+       
+    }
+}
