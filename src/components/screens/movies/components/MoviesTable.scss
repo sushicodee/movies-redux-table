@@ -3,12 +3,10 @@
     &:first-child{
     border-spacing: 0 21px;
     }
-    // min-width:574px;
+    width:29.8958%;
     border-collapse: separate;
-    margin-top:21px;
     border-spacing: 0 17px;
     thead{
-        margin-bottom:17px;
         tr{
             th{ 
                 text-align: left;
@@ -62,13 +60,13 @@
         tr{
             td{ 
                 
-                box-shadow: 0px 3px 3px$white;
+                box-shadow: 0px 3px 3px $white;
                 border: 0.20000000298023224px solid $grey;  
                 border-left: 0;
                 border-right: 0; 
                 margin-bottom: 9px;     
                 min-width: 60px;
-                max-width: 300px;
+                max-width: 350px;
                 padding: 0 0 0 39px;
                 overflow: hidden; 
                 text-overflow: ellipsis; 

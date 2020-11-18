@@ -33,7 +33,7 @@ export const fetchMovies = (Title) => async(dispatch) => {
                 Title
             },
           },
-          true,)
+        )
       dispatch({type:FETCH_SEARCH_RESULTS,payload:data})
     }
     catch (err) {
